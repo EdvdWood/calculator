@@ -77,12 +77,12 @@ button {
 
 .errorBack {
     transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+    border-color: #ff7300;
+    box-shadow: 0 0 1rem #ff7300;
   }
 
 .goodBack {
-    transform: scale(1.1);
+    transform: scale(1.05);
     border-color: green;
     box-shadow: 0 0 1rem green;
 }

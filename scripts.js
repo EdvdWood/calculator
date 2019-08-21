@@ -46,6 +46,7 @@ operate = (input) => {
 //Define logic to split up longer calculations
 getAnswer = () => {
     let input = display.textContent;
+        input = input.replace(/,/g, "");
         input = input.split(" ");
     let operationsNum = 0;
         operationsNum= input.reduce((total, item) => (item === "*" || item === "/" || item === "+" || item === "-") 
@@ -65,8 +66,9 @@ getAnswer = () => {
     //Rounding
     displayValue = input.join();
     displayValue = displayValue*100000;
-    displayValue = (Math.round(displayValue)/100000);
-    displayValue = String(displayValue).split();
+    displayValue = String(Math.round(displayValue)/100000);
+    autoComma()
+    displayValue = displayValue.split();
     display.textContent = displayValue[0];
 }
 
@@ -76,6 +78,21 @@ partialOperate = (array, index) => {
     let subProduct = `${operate(subArray)}`;
     array.splice(index-1,0, subProduct);
     return array;
+}
+
+autoComma = () => {
+    console.log(displayValue)
+    displayValue = displayValue.replace(/,/g, "");
+    console.log(displayValue)
+    displayValue = displayValue.split(" ");
+    console.log(displayValue);
+    for (let i = 0; i < displayValue.length; i++) {
+        for (let j = -3; -j < displayValue[i].length; j -= 4) {
+            displayValue[i] = displayValue[i].slice(0,j) + "," + displayValue[i].slice(j);
+        }
+        console.log(displayValue)
+    }
+    displayValue = displayValue.join(" ")
 }
 
 //Logic for inputs (Allowing dots/operators and clearing/backspacing)
@@ -148,6 +165,7 @@ keyPush = (input) => {
         const key = document.querySelector(`button[data-value="${input}"]`);
         key.classList.add('goodBack');
         displayValue += input;
+        autoComma();
         display.textContent = displayValue;
     } else if (operators.includes(input)) {
         addOperator(input);
