@@ -81,19 +81,15 @@ partialOperate = (array, index) => {
 }
 
 autoComma = () => {
-    console.log(displayValue)
     displayValue = displayValue.replace(/,/g, "");
-    console.log(displayValue)
     displayValue = displayValue.split(" ");
-    console.log(displayValue);
     for (let i = 0; i < displayValue.length; i++) {
         for (let j = -3; -j < displayValue[i].length; j -= 4) {
             displayValue[i] = displayValue[i].slice(0,j) + "," + displayValue[i].slice(j);
-        }
-        console.log(displayValue)
-    }
-    displayValue = displayValue.join(" ")
-}
+        };
+    };
+    displayValue = displayValue.join(" ");
+};
 
 //Logic for inputs (Allowing dots/operators and clearing/backspacing)
 clear = () => {
