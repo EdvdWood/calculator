@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator by Eddie</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <header>
+                <h1 class="header-text">
+                    Calculator by Eddie
+                </h2>
+            </header>
+        </div>
+        <div class="main">
+            <div class="calculator">
+                <div id="display">
+                    <p id="output">
+                        Awaiting Input
+                    </p>
+                </div>
+                <div class="buttonholder">
+                    <div id="numberbuttons">
+                            <button class="number button input" id="n1" data-key="97" data-value="1">1</button>
+                            <button class="number button input" id="n2" data-key="98" data-value="2">2</button>
+                            <button class="number button input" id="n3" data-key="99" data-value="3">3</button>
+                            <button class="number button input" id="n4" data-key="100" data-value="4">4</button>
+                            <button class="number button input" id="n5" data-key="101" data-value="5">5</button>
+                            <button class="number button input" id="n6" data-key="102" data-value="6">6</button>
+                            <button class="number button input" id="n7" data-key="103" data-value="7">7</button>
+                            <button class="number button input" id="n8" data-key="104" data-value="8">8</button>
+                            <button class="number button input" id="n9" data-key="105" data-value="9">9</button>
+                            <button class="number button input" id="n0" data-key="106" data-value="0">0</button>
+                            <button class="number button" id="ndot" data-key="110" data-value=".">.</button>
+   
+                    </div>
+                    <div id="calcbuttons">
+                            <button class="calculation button" id="backspace" data-key="8" data-value="Backspace">Back</button>
+                            <button class="calculation button" id="clear" data-key="27" data-value="Escape">Clear</button>
+                            <button class="calculation button operators" id="add" data-key="107" data-value="+">+</button>
+                            <button class="calculation button operators" id="subtract" data-key="109" data-value="-">-</button>
+                            <button class="calculation button operators" id="multiply" data-key="106" data-value="*">*</button>
+                            <button class="calculation button operators" id="divide" data-key="111" data-value="/">/</button>
+                            <button class="calculation button" id="operate" data-key="13" data-value="Enter">=</button>
+                    </div>
+
+                    <div id="altInput">
+                            <button class="number button input" id="n1" data-key="49" data-value="1">1</button>
+                            <button class="number button input" id="n2" data-key="50" data-value="2">2</button>
+                            <button class="number button input" id="n3" data-key="51" data-value="3">3</button>
+                            <button class="number button input" id="n4" data-key="52" data-value="4">4</button>
+                            <button class="number button input" id="n5" data-key="53" data-value="5">5</button>
+                            <button class="number button input" id="n6" data-key="54" data-value="6">6</button>
+                            <button class="number button input" id="n7" data-key="55" data-value="7">7</button>
+                            <button class="number button input" id="n8" data-key="56" data-value="8">8</button>
+                            <button class="number button input" id="n9" data-key="57" data-value="9">9</button>
+                            <button class="number button input" id="n0" data-key="48" data-value="0">0</button>
+                            <button class="number button" id="ndot" data-key="190" data-value=".">.</button>
+                    </div>
+
+       
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
